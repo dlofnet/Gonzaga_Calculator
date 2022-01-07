@@ -29,46 +29,46 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonAdd"
         android:layout_width="67dp"
         android:layout_height="58dp"
         android:text="+"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSubtract"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button3" />
+        app:layout_constraintTop_toTopOf="@+id/buttonSubtract" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonMultiply"
         android:layout_width="67dp"
         android:layout_height="58dp"
         android:text="x"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/buttonSubtract"
+        app:layout_constraintTop_toTopOf="@+id/buttonDivide" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonDivide"
         android:layout_width="67dp"
         android:layout_height="58dp"
         android:layout_marginTop="60dp"
         android:text="/"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonSubtract"
         android:layout_width="67dp"
         android:layout_height="58dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button4" />
+        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
+        app:layout_constraintTop_toTopOf="@+id/buttonMultiply" />
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
@@ -116,5 +116,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="102dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="@+id/buttonDivide"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
