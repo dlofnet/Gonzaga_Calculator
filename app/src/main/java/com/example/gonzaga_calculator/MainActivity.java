@@ -12,17 +12,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText txtVar1, txtVar2;
     Button btnAdd, btnSubtract, btnMultiply, btnDivide, btnModulo;
-    TextView txtAnswer;
+    static TextView txtAnswer;
 
-    double var1, var2;
-
-
+    static double var1;
+    static double var2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //initializing
         btnAdd = findViewById(R.id.btnAdd);
         btnSubtract = findViewById(R.id.btnSubtract);
         btnMultiply = findViewById(R.id.btnMultiply);
@@ -31,14 +31,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         txtAnswer = findViewById(R.id.answerText);
 
-
-
+        //set listeners
         btnAdd.setOnClickListener(this);
         btnSubtract.setOnClickListener(this);
         btnMultiply.setOnClickListener(this);
         btnDivide.setOnClickListener(this);
         btnModulo.setOnClickListener(this);
+    }
 
+    //methods here
+    public static void add() {
+        txtAnswer.setText(Double.toString(var1+var2));
+    }
+
+    public static void subtract() {
+        txtAnswer.setText(Double.toString(var1-var2));
+    }
+
+    public static void divide() {
+        txtAnswer.setText(Double.toString(var1/var2));
+    }
+
+    public static void multiply() {
+        txtAnswer.setText(Double.toString(var1*var2));
+    }
+
+    public static void modulo() {
+        txtAnswer.setText(Double.toString(var1%var2));
     }
 
     @Override
@@ -50,28 +69,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         var1 = Double.parseDouble(txtVar1.getText().toString());
         var2 = Double.parseDouble(txtVar2.getText().toString());
 
+        //button functionality
         switch(v.getId()){
             case R.id.btnAdd:
-                txtAnswer.setText(Double.toString(var1+var2));
-
+                add();
                 break;
+
             case R.id.btnSubtract:
-                txtAnswer.setText(Double.toString(var1-var2));
-
+                subtract();
                 break;
+
             case R.id.btnMultiply:
-                txtAnswer.setText(Double.toString(var1*var2));
-
+                multiply();
                 break;
+
             case R.id.btnDivide:
-                txtAnswer.setText(Double.toString(var1/var2));
-
+                divide();
                 break;
-            case R.id.btnModulo:
-                txtAnswer.setText(Double.toString(var1%var2));
 
+            case R.id.btnModulo:
+                modulo();
                 break;
         }
-
     }
 }
