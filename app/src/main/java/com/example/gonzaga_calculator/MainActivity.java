@@ -12,10 +12,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText txtVar1, txtVar2;
     Button btnAdd, btnSubtract, btnMultiply, btnDivide, btnModulo;
-    static TextView txtAnswer;
+    TextView txtAnswer;
 
-    static double var1;
-    static double var2;
+    double var1;
+    double var2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +40,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     //methods here
-    public static void add() {
+    public void add() {
         txtAnswer.setText(Double.toString(var1+var2));
     }
 
-    public static void subtract() {
+    public void subtract() {
         txtAnswer.setText(Double.toString(var1-var2));
     }
 
-    public static void divide() {
+    public void divide() {
         txtAnswer.setText(Double.toString(var1/var2));
     }
 
-    public static void multiply() {
+    public void multiply() {
         txtAnswer.setText(Double.toString(var1*var2));
     }
 
-    public static void modulo() {
+    public void modulo() {
         txtAnswer.setText(Double.toString(var1%var2));
     }
 
